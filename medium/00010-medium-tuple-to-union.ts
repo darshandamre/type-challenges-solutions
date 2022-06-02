@@ -7,6 +7,8 @@ type cases = [
 ];
 
 // ============= Your Code Here =============
-type TupleToUnion<T extends any[]> = T extends [infer P, ...infer Rest]
-  ? P | TupleToUnion<Rest>
-  : never;
+type TupleToUnion<T extends any[]> = T[number];
+
+// T extends [infer P, ...infer Rest]
+//   ? P | TupleToUnion<Rest>
+//   : never;
